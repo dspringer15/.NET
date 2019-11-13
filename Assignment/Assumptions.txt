@@ -1,0 +1,17 @@
+While creating this code I made the following assumptions: 
+
+1. The database with all available products is already made so for the sake of this calculator, I created a static list 
+of products that will be used by client of the application for verification purposes. The risk associate with this assumption 
+is determining how th edatabase will identify each product that is considered a luxury item for taxing purposes. Another risk 
+is visualizing how the application will complete error handling for empty orders. 
+
+2. The directions stated that luxury items are taxed doubled in specific state, but it did not specify which states those were.
+Due to the lack of clarification of those state, I assumed that none of the current clients were a part of those specific states.
+The risk in this assumption is that one of the 5 current clients did indeed fall under that category and required extra logic to
+be included in the logic for calculating their taxes and totals. 
+
+3. I assumed that users of the application would either have access to or know someone who would have access to the code to change 
+the variable for their client tax bracket in the event that the tax amount in their state should change. I have made it maintainable
+by creating it as a global variable that can be easily found and updated as needed. The risk that this poses is if/when the tax rate 
+in the area should change, the application would continue to tax customers at the previous tax rate until someone with proper 
+authorization can change the rate on the backend of the application. 
